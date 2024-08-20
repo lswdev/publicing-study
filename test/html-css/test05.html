@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML/CSS 기초테스트 - 스크롤 위치 고정</title>
+  <style>
+    html, body {
+      margin: 0; 
+      padding: 0; 
+    }
+    a {
+      display: inline-block;
+      width: 200px;
+      height: 50px;
+
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: rgb(92, 41, 0);
+      cursor: pointer;
+      border: 2px dashed rgb(92, 41, 0);
+    }
+    a:visited { color: rgb(92, 41, 0); }
+
+    .contain {
+      height: 200vh;
+      position: relative;
+    }
+
+    nav {
+      height: 80px;
+      background-color: beige;
+      box-shadow: 0 0 10px 10px rgba(105, 105, 70, 0.188);
+    }
+
+    .modal {
+      border: 5px dashed red;
+      border-radius: 15px;
+      display: block;
+      width: 300px;
+      height: 500px;
+    }
+
+    .btn {
+      display: block;
+      margin: 15rem auto;
+      padding: 1rem 2rem;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="contain">
+
+    <!-- 
+      <dialog> 태그는 보통 광고 팝업에 쓰입니다. 
+      기본적으로 숨김 처리 되어있습니다.
+      1. 위치는 오른쪽에서 15px만큼 떨어지게, 세로는 중앙에 위치하도록 해주세요.
+      2. 스크롤을 내릴 때 따라오게 해주세요.
+    -->
+    <dialog class="modal" id="ad-modal">
+      <h2>특별 할인!</h2>
+        <p>지금 가입하시면 20% 할인 혜택을 드립니다.</p>
+        <!-- 
+          1. 닫기 버튼을 누르면 팝업창이 닫히도록 해주세요.
+          2. 위치는 오른쪽 하단에 정렬해주세요.
+        -->
+        <button type="button">닫기</button>
+    </dialog> 
+
+    <!-- navigation bar 는 스크롤을 내려도 상단에 붙어서 따라옵니다. (position 문제) -->
+    <nav>
+      <!-- 
+        1. 링크를 클릭하면 항상 새로운 창으로 뜨게 해주세요.
+        2. 링크 박스들은 가로, 세로는 중앙 정렬이고 각 링크끼리 30px 떨어지게 해주세요.
+        3. 링크 텍스트는 세로,가로 중앙정렬입니다.
+        4. 링크에 마우스를 올리면 외각선을 red 색상으로 변경해주세요.
+      -->
+      <a href="https://www.naver.com/" title="네이버(새창)">네이버</a>
+      <a href="https://www.google.com/" title="구글(새창)">구글</a>
+      <a href="https://www.incruit.com/" title="인크루트(새창)">인크루트</a>
+    </nav>    
+
+    <!-- 버튼을 누르면 dialog 모달이 나오게 해주세요 (JavaScript) -->
+    <button type="button" class="btn">버튼을 누르면 광고가 나옵니다</button>
+
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML/CSS 기초테스트 - 테이블</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    caption {
+      padding-bottom: 20px;
+    }    
+    table {
+      width: 800px;
+      margin: 50px auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 2px solid gray;
+      padding: 20px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!--  
+    1. 목록의 폰트는 20px입니다.
+    2. 목록의 배경은 자유롭게 하시면 됩니다.
+    3. 내용4, 내용9, 내용14를 병합하세요.
+    4. 내용1, 내용2를 병합하세요.
+    5. 내용3, 내용8을 병합하세요.
+    6. 내용11, 내용12, 내용13을 병합하세요.
+    7. 푸터는 하나로 묶어주세요(병합)
+
+    ※ 디자인 원하시면 custom 하셔도 됩니다.
+  -->
+
+  <table>
+    <caption>😈 테이블 병합 테스트 😈</caption>
+    <thead>
+      <tr>
+        <th>목록1</th>
+        <th>목록2</th>
+        <th>목록3</th>
+        <th>목록4</th>
+        <th>목록5</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+      </tr>
+      <tr>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+      <tr>
+        <td>내용11</td>
+        <td>내용12</td>
+        <td>내용13</td>
+        <td>내용14</td>
+        <td>내용15</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td>푸터1</td>
+        <td>푸터2</td>
+        <td>푸터3</td>
+        <td>푸터4</td>
+        <td>푸터5</td>
+      </tr>
+    </tfoot>
+
+  </table>
+</body>
+</html>

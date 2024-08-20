@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript - 배열 출력 테스트</title>
+  <script src="./js-test01.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .my-info {
+      height: 100%;
+    }
+    
+    .skill-list {
+      margin: 0;
+      padding: 2rem;
+      list-style: none;
+      border: 2px solid black;
+    }
+    .skill-list li {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .skill-list li span {
+      background-color: green;
+      color: #FFF;
+      border-radius: 10px;
+      padding: 0.125rem 1rem;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="my-info">
+    <h1>이 곳에 JSON에서 가져온 데이터(title)를 출력하세요.</h1>
+    <hr>
+  
+    <div>
+      <h3>이름 : <strong>이 곳에 이름을 출력</strong></h3>
+
+      <h3>아이디 : <strong>이 곳에 아이디를 출력</strong></h3>
+
+      <h3>권한 : <strong>이 곳에 권한을 출력</strong></h3>
+
+      <h3>부서 : <strong>이 곳에 부서를 출력</strong></h3>
+
+      <ul class="skill-list"></ul>
+      <!-- 아래 예시와 같이 출력하세요. -->
+
+      <!-- 예시 :
+      <ul class="skill-list">
+        <li><span>html : 상급</span></li>
+        <li><span>css : 중급</span></li>
+        <li><span>javascript : 하급</span></li>
+      </ul>
+      -->
+
+    </div>
+
+  </div>
+
+  <!-- json 데이터
+  
+  const jsonData = {
+    title : 'JSON 데이터 가져오기',
+    userName : '쥐드래곤',
+    userAuth : 'admin',
+    userDept : 'DX연구소',
+    userSkill : {
+      html : '상급',
+      css : '중급',
+      javascript : '하급'
+    },
+    userId : 'kimBob',
+  }
+  -->
+  
+</body>
+</html>
