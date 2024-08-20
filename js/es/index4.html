@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1일차 ES 일반 선언함수 & Class</title>
+</head>
+<!--
+    응용문제1.
+    ccc라는 함수에 인자값 20을 입력하면 그 중 짝수만 출력되도록 ES로 제작하시오.
+    2,4,6,8,10,12,14,16,18,20
+-->
+<body>    
+</body>
+<script type="module">
+    import {ccc,aaa} from "./index4.js?v=3";    //aaa : 함수가 아닌 class명으로 호출한다.
+    ccc(20);
+    var n = new aaa("홍길동");  
+    //new aaa를 사용하는 이유는 aaa클래스를 호출과 동시에 인자값을 넘기기 위한 형태이기 떄문
+    /* class 사용시 무조건 new를 사용하여 class이름과 class 안에 있는 함수를 동시에 호출한다. */
+    console.log(n.mname);
+    //mname은 class에서 생성된 가상의 변수명입니다.
+</script>
+</html>

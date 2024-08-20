@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1일차 ES Class 및 핸들링 함수</title>
+</head>
+<body>
+<!--아이디 패스워드 모두 입력시 내 url로 전송-->
+<form name="frm">
+    <!--<button type="button" id="btn">클릭</button>-->
+    <input type="text" name="mid" id="mid">
+    <input type="password" name="mpass" id="mpass">
+    <input type="button" value="로그인">
+</form>
+
+
+<input type="text" id="email" name="email" readonly>
+<select id="selectbox">
+    <option value="">{이메일 선택}</option>
+    <option value="naver.com">네이버</option>
+    <option value="google.com">구글</option>
+    <option value="coopang.co.kr">쿠팡</option>
+</select>
+
+</body>
+<script type="module">
+    import {login_btn,mails} from "./index6.js?v=5";
+</script>
+</html>

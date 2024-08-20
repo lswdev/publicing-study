@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+span, label {
+  display: block;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+* {
+  text-decoration: none;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 480px;
+  min-width: 340px;
+  height: auto;
+  position: "";
+  border: 1px solid #7c357a;
+  padding: 20px 10px 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  color: #572055;
+}
+
+.page > ul {
+  max-width: 460px;
+  min-width: 320px;
+  height: auto;
+  position: "";
+}
+
+.page > ul > li {
+  max-width: 460px;
+  min-width: 320px;
+  height: 35px;
+  position: "";
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.page > ul > li > input {
+  max-width: 460px;
+  min-width: 320px;
+  height: 35px;
+  position: "";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #b59bc4;
+  text-indent: 5px;
+}
+
+.page > ul > .tb_list {
+  height: auto;
+  display: none;
+}
+
+.page > ul > .tb_list > .num_table {
+  margin: 0 auto;
+  width: 320px;
+  max-width: "";
+  min-width: "";
+  height: auto;
+  position: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page > ul > .tb_list > .num_table > li {
+  max-width: "";
+  min-width: 106.6px;
+  height: 40px;
+  position: "";
+  border: 1px white;
+  background-color: #cfb0e1;
+}
+
+.page > ul > .tb_list > .num_table > li:hover {
+  background-color: #b59bc4;
+}
+
+.page > ul > .tb_list > .comp_btn {
+  margin-top: 10px;
+  text-align: center;
+  max-width: 150px;
+  min-width: 150px;
+  height: 30px;
+  position: "";
+  background-color: #cfb0e1;
+  text-indent: 0;
+  border: 0;
+}
+
+.page > ul > .tb_list > .comp_btn:hover {
+  background-color: #b59bc4;
+}
+
+.page > ul > .sub_btn {
+  text-align: center;
+}
+
+.page > ul > .sub_btn > input {
+  max-width: 150px;
+  min-width: 150px;
+  height: 30px;
+  position: "";
+  background-color: #cfb0e1;
+  text-indent: 0;
+  border: 0;
+}
+
+.page > ul > .sub_btn > input:hover {
+  background-color: #b59bc4;
+}
+/*# sourceMappingURL=index16.css.map */

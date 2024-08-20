@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body{ margin: 0; padding: 0; }
+span,label{display: block;}
+ul,ol{margin: 0; padding: 0; list-style: none;}
+*{text-decoration: none;}
+@mixin object($mw,$nw,$h,$posi){
+    max-width: $mw;
+    min-width: $nw;
+    height: $h;
+    position: $posi;
+}
+
+.page{
+    margin: 0 auto;
+    @include object(480px,340px,auto,"");
+    border: 1px solid rgb(124, 53, 122);
+    padding: 20px 10px 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(87, 32, 85);
+    & > ul{
+        @include object(460px,320px,auto,"");
+        & > li{
+            @include object(460px,320px,35px,"");
+            margin-bottom: 20px;
+            text-align: center;
+            & > input{
+                @include object(460px,320px,35px,"");
+                box-sizing: border-box;
+                border: 1px solid rgb(181, 155, 196);
+                text-indent: 5px;
+            }
+        }
+        & > .tb_list{
+            height: auto;
+            display: none;
+            & > .num_table{
+                margin: 0 auto;
+                width: 320px;
+                @include object("","",auto,"");
+                display: flex;
+                flex-flow: wrap row;
+                justify-content: center;
+                align-items: center;
+                & > li{
+                    @include object("",106.6px,40px,"");
+                    border: 1px white;
+                    background-color: rgb(207, 176, 225);
+                    &:hover{
+                        background-color: rgb(181, 155, 196);
+                    }
+                }
+            }                
+            & > .comp_btn{
+                margin-top: 10px;
+                text-align: center;
+                @include object(150px,150px,30px,"");
+                background-color:  rgb(207, 176, 225);
+                text-indent: 0;
+                border: 0;
+                &:hover{
+                    background-color: rgb(181, 155, 196);
+                }
+            }
+        }
+        & > .sub_btn{
+            text-align: center;
+            & > input{
+                @include object(150px,150px,30px,"");
+                background-color:  rgb(207, 176, 225);
+                text-indent: 0;
+                border: 0;
+                &:hover{
+                    background-color: rgb(181, 155, 196);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2일차 ECMA Class + 확장 함수</title>
+    <style>
+        .box {
+            width: 100px; height: 100px; background-color: lightcoral;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box"></div>
+</body>
+<script type="module">
+    import { aaa , bbb } from "./index7.js?v=2";
+    let mid = new aaa("홍길동");
+    if(mid.sign == "ok"){
+        console.log(mid.login());
+    }
+    else{
+        console.log(mid.errors());
+    }
+
+    let zz = new bbb(); //bbb를 호출한다.
+</script>
+</html>

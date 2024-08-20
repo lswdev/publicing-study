@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2일차 ES 응용문제</title>
+    <style>
+        ul,ol{list-style: none; margin: 0; padding: 0; width: 400px; position: relative;}
+        li { margin-bottom: 10px;}
+        
+        div > input{
+            width: 200px; height: 30px;
+            border-color: tomato;
+            box-sizing: border-box;
+            text-indent: 5px;
+        }
+        li:nth-of-type(2){
+            position: absolute;
+            right: 0;
+        }
+        li:nth-of-type(2) > button{
+            width: 100px; height: 30px;
+            background-color: lightcoral;
+            border: 0;
+            color: white;
+            cursor: pointer;
+        }
+        .txarea{
+            margin-top: 10px;
+            width: 400px;
+            height: 70px;
+            border-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <form id="frm" name="frm" enctype="application/x-www-form-urlencoded">
+        <input type="hidden" name="url_key" value="http://lswhobby.dothome.co.kr/es/index12.html">
+        <div>
+            <input type="text" name="person_name" id="person_name" placeholder="고객명을 입력하세요">
+            <input type="password" name="person_pw" id="person_pw" placeholder="패스워드를 입력하세요">
+            <ul>
+                <li><textarea name="person_text" id="person_text" class="txarea"></textarea></li>
+                <li><button type="submit" id="btn">댓글등록</button></li>
+            </ul>
+        </div>
+    </form>
+</body>
+<script type="module">
+    import { txt_btn } from "./index12.js?v=1";
+</script>
+</html>
+<!--http://lovertvtest.dothome.co.kr/es/noticeok.php-->
+<!--
+    name값
+    히든명 : url_key    히든값 : lswhobby.dothome.co.kr/es/index12.html
+    고객명 : person_name
+    패스워드 : person_pw
+    댓글내용 : person_text
+-->

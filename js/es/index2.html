@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <!-- ES9 : 화살표함수 (리턴) -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1일차 ES 인스턴스 및 핸들링형태</title>
+    <script>
+        /*
+        function abc(){
+            console.log("홍길동");
+        }
+        */
+    </script>
+</head>
+<body>
+    <input type="button" value="클릭" id="btn">
+</body>
+    <script type="module">  //ES script는 body 아래부분에 넣는게 좋다.
+        import {ccc,ddd,abc} from "./index2.js";
+        //복합 인스턴스도 사용이 가능합니다.(2개함수 동시호출 가능)
+        ccc(2,3,4); //해당 함수에 인자값을 적용한다.
+        ddd(10,20);
+        document.querySelector("#btn").addEventListener("click",abc);
+    </script>
+</html>

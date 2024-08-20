@@ -1,0 +1,73 @@
+<?php
+    $data = date("YmdHis");
+?>
+<!DOCTYPE html>
+<html lang="ko">
+    <!--
+        기본사이즈 (340 ~ 480까지)
+    -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>모바일전용 회원가입페이지</title>
+<link type="text/css" rel="stylesheet" href="./index16.css?v=<?=$data?>">
+</head>
+<body>
+    <form name="frm" id="frm">
+        <input type="hidden" name="mlevel" value="1">
+        <input type="hidden" name="mcerti" value="">
+        <input type="hidden" name="magree1" value="">
+        <input type="hidden" name="magree2" value="">
+    <section class="page">
+        <ul>
+            <li>MEMBERSHIP</li>
+            <li>
+                <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요">
+            </li>
+            <li>
+                <input type="password" name="mpass" id="mpass" placeholder="패스워드를 입력하세요" readonly>
+            </li>
+            <li class="tb_list" id="tb_list">
+                <ol class="num_table" id="num_table">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>0</li>
+                        <li>!</li>
+                        <li>*</li>
+                        <li>_</li>
+                        <li>-</li>
+                        <li>.</li>
+                </ol>
+                <input type="button" id="complete" value="완료" class="comp_btn">
+            </li>
+            <li>
+                <input type="text" name="mname" id="mname" placeholder="성함을 입력하세요">
+            </li>
+            <li>
+                <input type="email" name="memail" id="memail" placeholder="이메일을 입력하세요">
+            </li>
+            <li>
+                <input type="tel" name="mhp" id="mhp" placeholder="연락처를 입력하세요" maxlength="11">
+            </li>
+            <li>
+                <input type="text" name="mnick" id="mnick" placeholder="닉네임을 입력하세요">
+            </li>
+            <li class="sub_btn">
+                <input type="submit" id="subbtn" value="회원가입">
+            </li>
+        </ul>
+    </section>
+</form>
+</body>
+<script type="module">
+    import { num_look,num_comp,ph_num,join_ck } from "./index16.js?v=3";
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1일차 ES Class 및 일반함수</title>
+</head>
+<body>
+    <input type="text" id="mid" name="mid">
+    <input type="button" value="로그인" id="btn">
+    <span id="box"></span>
+</body>
+<script type="module">
+    //import로 필요한 함수만 작동시키기 때문에
+    //일반 javascript보다 10배는 빠르다.
+    
+    import {aaa,login} from "./index5.js?v=2";  //login은 class이다.
+
+    let a = new aaa(12,5);
+    //console.log(a.answer);
+    let l;
+    document.querySelector("#btn").addEventListener("click",function(){
+        //클릭 후 진행할 사항을 적용하게 됩니다.
+        let l = new login();
+        document.getElementById("box").innerText = l.aws;
+        //alert(l.aws);
+    });
+    
+    
+</script>
+</html>

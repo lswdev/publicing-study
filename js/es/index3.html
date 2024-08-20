@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1일차 ES 화살표 함수</title>
+    <script>
+/* 자바스크립트 일반 선언문
+        let aaa = function(a1,a2){
+            var bb = a1 * a2;
+            return bb;
+        }
+        console.log(aaa(10,20));
+*/
+/*
+        let aaa = (a1,a2) => a1*a2; //화살표 함수를 이용하여 변수 선언
+        var bb = aaa(10,20);
+        console.log(bb);
+*/        
+    </script>
+</head>
+<body>
+    
+</body>
+    <script type="module">
+        import {aaa,bbb} from "./index3.js?v=3";
+        console.log(aaa(10,20)); //화살표 함수 호출 인자값이 있을 경우이다.
+        console.log(bbb()); //화살표 함수 호출. 빈 인자값일 경우이다.
+    </script>
+</html>

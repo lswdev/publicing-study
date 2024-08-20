@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--
+        let abc = [1,2,3,4,5];
+        console.log(abc[0]);
+
+        JS : var 변수선언
+        ES : let, const
+        ES : map, for in
+        ES5,6
+        화살표함수 : (ES6)
+
+        ES9 선언형태 완전 변경
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA script 1일차 (엔진설정 및 import, export)</title>
+    <!-- IE에서는 작동 안된다. -->
+    <script type="module">  
+    //module은 ECMA 전용으로 사용하기 위한 기본 엔진 코드입니다.
+        import a from "./index.js?v=1";
+        // import 가져오는 부분 파일로드
+        // a 는 index.js에 있는 모든 함수 및 데이터를 가져오는 익명 변수이다.
+        // from은 가져올 파일명을 말한다.
+        
+        abc("홍길동입니다.");       //순서가 위에있어도 상관없다.
+        // abc함수를 호출하면서 인자값을 던지게된다.
+        import {abc} from "./index.js?v=2";
+        // import시 같은 익명 변수값을 사용하면 안된다.
+        // {abc}는 abc함수를 호출하는 인스턴스입니다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+%ulol{
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+}
+@mixin size($w,$h,$dis,$co) {
+    width: $w; 
+    height: $h;
+    display:$dis; 
+    background-color:$co;
+}
+@mixin msize($maxw,$h) {
+    max-width: $maxw; 
+    height: $h;
+}
+@mixin aligns($d,$wa,$j,$ai) {
+    flex-direction: $d;
+    flex-wrap: $wa;
+    justify-content: $j;
+    align-items: $ai;
+}
+*,body{
+  font-family:  'Noto Sans KR', sans-serif;
+  margin:0; padding: 0;
+}
+
+.members_terms{
+    @include msize(480px, auto);
+
+    width: 100%; 
+    min-width: 340px; 
+    text-align: right; 
+    padding:20px;
+    border:3px solid navy; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+
+    & > p { 
+        text-align: center; 
+        font-size: 20px; 
+        padding-bottom: 40px; 
+        box-sizing: border-box; 
+    }
+    & .n_texts { 
+        @include size(100%,40px,block,"");
+        font-size: 15px;
+        text-indent: 10px;
+        line-height: 40px;
+        text-align: left;
+    }
+    & .terms_style{
+        @include size(100%,100px, block,""); 
+        border:1px solid navy; 
+        text-align: left;    
+    }
+    & .t_icons { 
+        @include size(80px, 30px, inline-block, bisque);
+        border-radius: 12px; 
+        border:0; 
+        margin-top: 10px; 
+        box-sizing: border-box;
+        position: relative; 
+        border:2px solid navy; 
+
+        & > label { 
+            // transition: all 1s ease;
+            @include size(26px,26px,block, navy); 
+            border-radius: 100%; 
+            position: absolute; 
+            font-size: 12px; 
+            color:white; 
+            line-height: 26px;
+        }
+    }
+    & .tot_btns {
+        @include size(100%,40px,block,""); 
+        text-align: center;
+        padding-top: 20px; 
+        box-sizing: border-box;
+
+        & > .c_btns{
+           @include size(100px,inherit,inline-block,bisque); 
+           border-radius: 5px;
+           border:0; 
+           line-height: 40px; 
+        }
+    }
+}
