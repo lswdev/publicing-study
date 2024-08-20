@@ -1,0 +1,102 @@
+@charset "UTF-8";
+* { 
+    box-sizing: border-box; 
+}
+body { 
+    margin: 0; 
+    padding: 0;
+}
+span,label { 
+    display: block; 
+}
+ul,ol,dl { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+img { 
+    width: 100%; 
+    object-fit: cover;
+}
+
+/* PC */
+.box {
+    width: 700px; 
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -350px;
+    top: 50%;
+    margin-top: -20px;
+    text-align: center;
+}
+
+::placeholder { 
+/* placeholder 색상 변경(::placeholder 크롬, 사파리, 엣지, 오페라)  */
+    color:firebrick; 
+}
+:-ms-input-placeholder{ 
+/* :-ms-input-placeholder : IE전용 placeholer 색상변경 */
+    color:firebrick; 
+}
+.id_text {
+    width: 200px; 
+    height: 40px;
+    background-color: khaki;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    text-indent: 5px;   /* 글자 앞을 밀어준다. */
+}
+.pass_text {
+    width: 200px; 
+    height: 40px;
+    background-color: khaki;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    text-indent: 5px;
+}
+.btn1 {
+    width: 120px; 
+    height: 40px;
+    background-color: tomato;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+.olbox { 
+    height: inherit; 
+    display: inline-block;
+}
+.olbox > li {
+    float: left; 
+    margin-left: 5px;
+}
+/* unset : IE에서는 작동하지 않는다. */
+
+/* 모바일 */
+@media screen and (min-width:320px) and (max-width:560px) {
+    .box {
+        width: 98%; 
+        height: 150px;
+        border: 1px solid tomato;
+        border-radius: 10px;
+        position: absolute;
+        left: 1%;
+        top: 30%;
+        margin: 0;
+        padding-top: 10px;
+    }
+    .olbox { 
+        width: inherit; 
+        display: block;
+    }
+    .olbox > li {
+        float: none;  /* float 값을 초기화시킨다. none을 써도 무방하다. unset을 쓰면 IE에서는 사용x */
+        margin-left: 5px; 
+        margin-bottom: 5px;
+    }
+    .id_text, .pass_text, .btn { 
+        width: 90%;
+    }
+}

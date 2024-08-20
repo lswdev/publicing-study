@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <!-- 
+    <head>: 문서 메타데이터 (헤더) 요소 
+    - 문서 정보(메타데이터)를 담는다. (제목, 스크립트, 스타일 시트 등)  
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 기초01 - 기본 태그</title>
+  </head>
+
+  <body>    
+    <!-- html의 기본 주석입니다. -->
+
+    <a href="https://www.naver.com/" target="_blank">링크 태그</a>
+    
+    <br>  <!-- br : 줄 넘김 태그 -->
+
+    <b>굵은 글씨 태그</b>  <!-- b : 폰트 굵기를 bold 처리 해준다. --><br>
+    
+    <strong>굵은 글씨 태그</strong>  <!-- strong : b태그와 비슷하지만 웹 검색엔진 최적화(SEO)를 높여주는 태그 + 음성 읽기 도구에서 읽어준다. --> <br>
+
+    <small>작은 글씨 태그</small>  <!-- small : 작은 글꼴을 적용시킨다. --> <br>
+
+    <u>밑줄 태그</u>  <!-- u : underline 을 생성해준다. --><br>
+
+    <i>기울임 태그</i>  <!-- i : 폰트 스타일이 italic 속성이다. 기울임 스타일. --><br>
+
+    <em>기울임 태그</em>  <!-- em : i태그와 비슷하지만 웹 검색엔진 최적화(SEO)를 높여주는 태그 + 음성 읽기 도구에서 읽어준다. --><br>
+
+    <p>문단 태그</p>  <!-- p : 문단을 나타내는 태그로, 기본적인 간격이 있다. --> <br>
+
+    <img src="../../images/happy-cat.gif" alt="해피캣" />  <!-- gif 이미지라 움직이는 것입니다. --> 웹 접근성
+    <!-- img : 이미지를 출력하는 태그, src에는 상대경로, 절대경로가 들어간다. alt에는 이미지가 없을 때 나타나는 텍스트를 입력. --> <br>
+
+    <!-- <img 
+      srcset="/images/happy-cat.gif, /images/cats.gif" 
+      sizes="(max-width: 1000px) 360px, 1200px"
+      src="/images/happy-cat.gif"
+      alt="해피캣" />  <br> --> <!-- srcset은 source가 출력되는 순서를 지정해준다. --> 
+
+      
+      <hr>
+      
+      
+    <!-- 
+      video : HTML5 전용 비디오 태그입니다.
+      mp4, avi, ogg, mpeg, webm (모바일에서 최소화질로 영상을 빠르게 출력.)
+      controls : 영상 도구틀 상용
+      muted : 음소거
+      source : 영상을 불러올 태그 src 경로
+      type : video, image, audio
+      poster 속성 : 썸네일 이미지
+      track : 자막을 사용할 때 이용합니다.(vtt 자막파일 주로 이용)
+      loof : 반복재생
+      autoplay : 자동재생
+    -->
+    <video poster="" class="v" autoplay controls muted loop style="width: 500px;">      
+      <source src="https://cdn.pixabay.com/video/2023/07/04/170063-842720159_large.mp4" type="video/mp4" />
+      <!-- 자막 -->
+      <track kind="subtitles" src="./test.vtt" srclang="en" label="English" />
+    </video>
+    <br>
+
+    <table cellspacing="0" cellpadding="0" border="1" borderColor="red">  <!-- table : 테이블의 컨테이너이다. cellspacing, cellpadding으로 기본 간격을 조정할 수 있으며, css로 조정이 가능하다.  -->  
+      <thead>  <!-- thead : table-head 이며 테이블 상단에 위치합니다. 상황에 따라 빼고 사용 가능 -->
+        <tr>  <!-- tr : 테이블 밑으로 한 줄(행)을 추가할 때 사용.  -->
+          <th>테이블 헤더입니다.</th> <!-- th : 데이터의 주제 등 타이틀을 작성할 때 사용 -->
+          <th>테이블 헤더입니다.</th>
+        </tr>
+      </thead>
+      <tbody>  <!-- tbody : table-body 이며 테이블의 주 내용을 작성. -->
+        <tr>
+          <td>분류 1</td>  <!-- td : 기본적인 데이터나 내용을 입력할 때 사용 -->
+          <td>분류 2</td>
+        </tr>
+        <tr>
+          <td>테이블 데이터 01</td>
+          <td>테이블 데이터 02</td>
+        </tr>
+      </tbody>
+      <tfoot>  <!-- tfoot : table-foot 이며 테이블의 마지막 부분. -->
+        <tr>
+          <td>테이블 푸터입니다.</td>
+          <td>테이블 푸터입니다.</td>
+        </tr>
+      </tfoot>
+    </table> <br>
+
+    <br>
+    <hr>
+
+    <table style="
+      width: 300px;
+      border: 3px solid black;
+      border-spacing: 0;      
+    ">
+      <thead>
+        <tr style="background-color: antiquewhite;">
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr style="background-color: rgb(227, 250, 215);">
+          <td>1-1</td>
+          <td colspan="2">2-2</td>
+          
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr style="background-color: rgb(158, 117, 62);">
+          <td>3</td>
+          <td>4</td>
+          <td>3</td>
+        </tr>
+        <tr style="background-color: rgb(158, 62, 150);">
+          <td>3-2</td>
+          <td rowspan="2">4-2</td>
+          <td>3-2</td>
+        </tr>
+        <tr style="background-color: rgb(158, 62, 62);">
+          <td>3-3</td>
+          <td>3-3</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr style="background-color: rgb(158, 104, 33);">
+          <td>5</td>
+          <td>6</td>
+          <td>3</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr>
+    <br>
+    
+    <!-- fieldset :  많이 사용하지는 않지만 border 부분에 타이틀이 들어갈 수 있는 영역 -->
+
+    <fieldset>
+
+      <legend>회원정보</legend> <!-- border에 겹칠 title -->
+
+      <label for="name">이름</label>
+      <input type="text" id="name"><br>
+      
+      <label for="gender">성별</label>
+      <input type="text" id="gender"><br>
+
+    </fieldset>
+
+
+
+    <!-- 참고문서
+      1. HTML이란 : https://developer.mozilla.org/ko/docs/Web/HTML
+      2. HTML의 요소 : https://developer.mozilla.org/ko/docs/Web/HTML/Element
+      3. HTML의 이미지 : https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+      4. 비디오와 오디오 콘텐츠 : https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content  -- 번역해서 읽으세용
+      5. HTML 테이블 : https://developer.mozilla.org/ko/docs/Learn/HTML/Tables
+    -->
+  </body>
+</html>

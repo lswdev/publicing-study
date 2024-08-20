@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML&CSS 2일차 중급 반응형 (direction + important) + gd</title>
+<style>
+body{ margin: 0; padding: 0;}
+ul, ol {list-style: none; margin: 0; padding: 0;}
+span, label {display: block;}
+a {text-decoration: none;}
+/*
+div { width: 500px !important;
+    color: red !important;
+} */  /* !important : 강제로 원래있던 색상을 빼고 해당 속성을 우선적용한다.(강제/위치상관x) */
+
+.box1 { 
+    width: 200px; 
+    height: 30px;
+    border: 1px solid black;
+   /* color: blue !important; */    /* 같은 !important라도 밑에 쓰면 우선순위로 만들어준다.*/
+    direction: ltr;
+    /* direction : 글자의 방향을 지정할 수 있습니다. */
+    /* ltr =( left to right ) 왼쪽정렬 */
+}
+.box2{
+    width: 200px; 
+    height: 30px;
+    border: 1px solid black;
+    color: green;
+    direction: rtl;
+    /* rtl =( right to left ) 오른쪽 정렬이지만 기호는 반대로 작용한다. */
+}
+.box3 {
+    width: 700px; 
+    height: 100px;
+    background:linear-gradient(red,pink,yellow);
+}
+/* background:linear-gradient  : 선 모양의 그레디언트 한가지 이상의 색상을 조합하여 표현한다. */
+
+.box4 {
+    width: 700px; 
+    height: 100px;
+    background:linear-gradient(to right,orange,green,red);
+}
+/* background:linear-gradient (to right / left 색상) : 그라디언트 방향을 설정 */
+
+.box5 {
+    width: 700px; 
+    height: 100px;
+    background:linear-gradient(45deg, red,yellow); 
+}
+/* deg = degree (각도) */
+
+.box6 {
+    width: 700px; 
+    height: 100px;
+    background:linear-gradient(maroon 40%, yellow 60%);
+}
+/* px로도 사용 가능. but, height값을 맞춰줘야 한다. */
+
+.box7 {
+    width: 1000px; 
+    height: 490px;
+    background:
+    linear-gradient(45deg, transparent 95%, rgb(230, 27, 27) 5%),
+    url("../JS/banners/banner0.png");
+    position: relative;
+}
+/* transparent : 투명도를 표현할 때 사용한다. */
+.box7:hover {
+    background: linear-gradient(45deg, transparent 95%, rgb(14, 3, 38) 5%),
+    url("../JS/banners/banner0.png");
+}
+.more {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+.box8 {
+    width: 1000px; 
+    height: 490px;
+    /* background: radial-gradient(blue 5%, yellow 95%); */
+    /* background: radial-gradient(circle, red,blue,yellow); */
+    /* background: radial-gradient(at -5% 0% ,red,blue,yellow); */
+    background: repeating-radial-gradient(red 10%, blue 20%, yellow 20%);
+}
+/* radial-gradient : 원형 그레디언트 */
+/* circle : 완전 동그라미 형태로 출력된다. */
+/* at x축 y축 원형을 움직일 때 사용합니다. */
+/* repeating : 반복 원을 사용할 때 사용합니다. */
+
+
+.box9 {
+    width: 1000px; 
+    height: 490px;
+    /* background (image,repeat,color,position,size) */
+    background-image: 
+    url("../JS/banners/banner1.png"),
+    url("../JS/banners/banner2.png"),
+    url("../JS/banners/banner0.png");
+    background-repeat: no-repeat;
+    background-position: 0 0, 500px 0; /* ,를 기준으로 background의 순서를 결정 (x축, y축),(x축, y축);  */
+    background-size: 50%, 50%, 100%; /* ,를 기준으로 첫번째, 두번째 background를 결정한다. */
+    border: 1px solid gray;
+}
+/* background-image는 여러개의 이미지를 사용할 수 있습니다. ,를 기준으로 순서를 나눈다. */
+/* background-size 배경 이미지 크기를 조정할 수 있습니다. */
+/* background-position 배경 위치조정. x축, y축을 구분합니다. */
+</style>
+</head>
+<body>
+    <div class="box1">TEST AAA!</div>
+    <div class="box2">!홍길동님 환영합니다.</div>
+    <br><br>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7">
+        <span class="more">+more</span>
+    </div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML&CSS 3일차 중급 반응형 (transform)</title>
+<style>
+body{ margin: 0; padding: 0;}
+ul, ol {list-style: none; margin: 0; padding: 0;}
+span, label {display: block;}
+a {text-decoration: none;}
+
+.box {
+    width: 100px; 
+    height: 100px;
+    background-color: green;
+    transform: translate(0, 100px);
+    /* transform : 변형을 사용한다. CCS3부터 사용. */
+}
+/* teanslate : 오브젝트의 위치를 이동시킬 때 사용합니다(x축, y축)
+    position을 쓰지 않고 이동할 때 주로 쓴다. */
+
+.box:hover { 
+    transform:translate(100px,100px);
+}
+.box2 {
+    width: 100px; 
+    height: 100px;
+    background-color: red;
+    transform: rotate(30deg);
+}
+/* rotate는 오브젝트를 시계방향 또는 시계 반대방향으로 각도를 이용하여 회전시킵니다. */
+
+.box3 {
+    width: 100px; 
+    height: 100px;
+    background-color: orange;
+    transition: 0.5s ease all;
+}
+.box3:hover { 
+    transform: scale(1.5, 0.5);
+    /* scale : 오브젝트의 크기를 변화시킵니다. 0=최하단위, 1=원래크기(x축,y축 설정) */
+}
+
+.box4 {
+    width: 100px; 
+    height: 100px;
+    background-color: skyblue;
+    transform: skew(0, 30deg);
+}
+/* skew : 오브젝트의 기울기를 변화시킵니다.(가로,세로 deg를 사용) */
+</style>
+</head>
+<body>
+    <div class="box"></div> <br><br>
+    <div class="box2"></div> <br><br>
+    <div class="box3"></div> <br><br>
+    <div class="box4"></div> <br><br>
+</body>
+</html>

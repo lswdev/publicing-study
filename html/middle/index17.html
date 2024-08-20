@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML&CSS 4일차 중급 반응형 (filter + border)</title>
+<!-- <script src="../jq/jquery.js"></script> -->
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+    </script>
+<script>
+    $(document).ready(function(){
+
+    });
+</script>
+<style>
+body{ margin: 0; padding: 0;}
+ul, ol {list-style: none; margin: 0; padding: 0;}
+span, label {display: block;}
+a {text-decoration: none;}
+img { width: 30%;}
+
+.img {
+    filter: hue-rotate(150deg);
+}
+/* filter효과 :  blur(--px), grayscale(--%), contrast(--%), hue-rotate(--deg) */
+/* 
+    단점 : IE에서 작동이 안된다. 모바일 전용! (2024 기준 : 하지만 이젠 IE를 안쓰죠)
+*/
+.box { 
+    width: 0px; 
+    height: 0px;     
+    /* transparent는 없애는게 아니고 색상을 투명하게 하는 것이다. */
+    /* 삼각형 오브젝트를 제작할 때에는 양쪽에 있는 border값을 이용하여 제작하게 됩니다.
+    맞은편에 있는 border는 none 또는 코드를 작성하지 않습니다. */
+    border-top: 20px solid transparent; 
+    border-bottom: 20px solid transparent;
+    /* border-left: 20px solid none; none은 사실상 빼도 된다. */
+    border-left: 20px solid orange;
+    border-right: 20px solid orange;
+}
+</style>
+</head>
+<body>
+    <img src="./images/happy-cat.gif" class="img">
+    <div class="box"></div>
+</body>
+</html>

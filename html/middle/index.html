@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="chrome=1, IE=Edge">
+<title>HTML&CSS 1일차 중급</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    span, label {
+        display: block;
+    }
+    .div {
+        width: 1200px; 
+        height: 300px;
+        background-color: orangered;
+        display: table-cell; 
+        vertical-align: middle;
+    }
+    .span {
+        width: inherit; 
+        /* inherit : 부모의 속성을 가져올 때 사용합니다. */
+        height: 100px;
+        background-color: greenyellow;
+        margin: 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div class="div">
+        <span class="span">TEST<br>TEST</span>
+    </div>
+    <br><br>
+
+    <!--
+        특정 파일만 올리게 하고 싶을 때 accept를 쓴다.
+        accept : file 기준에 사용이 된다.
+        audio, video, image
+        해당 부분을 전체 사용하고 싶을 경우 *기호를 사용하면 해당 파일 속성 파트가
+        모두 사용이 가능합니다.
+    -->
+    <!-- accept=" 파일/* " : *은 모든 파일을 뜻한다. -->
+
+    <input type="file" accept="image/png, image/gif, image/jpeg">
+    <br>
+
+    <input type="file" accept=".txt">
+    <br>
+
+    <input type="file" accept="video/*">
+    <br>
+
+    <input type="file" accept="image/*">
+    <br><br>
+    
+    <!-- a 태그에 download 속성을 추가하면, 해당 파일을 다운로드 할 수 있습니다. -->
+    <a href="/images/happy-cat.gif" download title="누르면 다운로드 됩니다.">
+        <img src="/images/happy-cat.gif">
+    </a>
+</body>
+</html>

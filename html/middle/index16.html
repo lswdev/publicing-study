@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML&CSS 4일차 중급 반응형 (flex)-응용</title>
+    <!-- <script src="../jq/jquery.js"></script> -->
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+    <style>
+        body{ margin: 0; padding: 0;}
+        ul, ol {list-style: none; margin: 0; padding: 0;}
+        span, label {display: block;}
+        a {text-decoration: none;}
+        img { width: 100%;}
+
+        .box { 
+            width: 350px; 
+            height: 350px;
+            background-color: cornflowerblue;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        .sbox {
+            width: 100px; 
+            height: 100px;
+            background-color: royalblue;
+            margin-bottom: 15px;
+        }
+
+
+        .ulcss { 
+            max-width: 1000px; /* or width:100%; */
+            height: inherit;    
+            min-width: 500px; /* 500이하부터는 서서히 잘리게 한다. */
+            /* 가로값을 정확이 px로 잡아주면 뭉게지지 않고 값을 유지한다. */
+            /* 높이값을 무조건 잡아줘야 세로정렬이 된다. */
+            flex-wrap: wrap;    
+            /* warp을 줘야 줄어들 때 수치값을 유지한다. */
+            /* nowarp으로 하면 밑으로 내려가기보다는 그냥 길이가 줄어든다. */
+            display: flex;
+            justify-content: space-around;    /* 가로정렬 */
+            /* align-items: center; */      /* 가로정렬 */
+            align-content: center;
+        }
+        .ulcss > li {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+        }
+        .ulcss > li:nth-child(1)  {background-color: khaki; }
+        .ulcss > li:nth-child(5)  {background-color: khaki; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="sbox"></div>
+        <div class="sbox"></div>
+        <div class="sbox"></div>
+        <div class="sbox"></div>
+        <div class="sbox"></div>
+        <div class="sbox"></div>
+    </div>
+    <br><br>
+    <header style="height: auto; border: 1px solid black;">
+        <ul class="ulcss">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+</body>
+</html>

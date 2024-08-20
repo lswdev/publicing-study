@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML&CSS 3일차 중급 반응형 (transform3 + transition) + jQuery</title>
+    <!-- <script src="../jq/jquery.js"></script> -->
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#box2").click(function(){
+                $(this).css({
+                    "transform":"translate(500px, 0)"
+                });
+            });
+
+            $("#check").click(function(){
+                var $a = $(this).is(":checked");    
+                //.is(":checked") 는 true, false로 체크 유무를 파악해준다. ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+                console.log($a);
+                
+                if($a==true){
+                    $("#box3").css({
+                        "width":"600px",
+                        "background-color":"yellowgreen"
+                    });
+                }
+                else{
+                    $("#box3").css({
+                        "width":"",  //""는 원래 값으로 돌아간다는 뜻. (width : 100px로)
+                        "background-color":""
+                    });
+                }
+            });
+        });
+    </script>
+    <style>
+        body{ margin: 0; padding: 0;}
+        ul, ol {list-style: none; margin: 0; padding: 0;}
+        span, label {display: block;}
+        a {text-decoration: none;}
+
+        .box {
+            width: 100px; 
+            height: 100px;
+            background-color: orange;
+        }
+        .box:hover {
+            width: 200px; 
+            height: 50px;
+            background-color: red;
+            transition-property: all; /* width, height, all */
+            /* property : 어떤 속성을 효과적으로 적용할 것인지 선택하는 사항 (기본 base는 all이다.)*/
+            transition-duration: 3s;
+            /* duration : 효과 지속 시간을 설정할 수 있다. */
+
+        /*   transition: width 3s ease; */ /* property duration timing-function; 순으로 배열한다.*/
+        }
+        .box2 {
+            width: 100px; 
+            height: 100px;
+            background-color: orange;
+            transition-duration: 5s;
+            /* transition-timing-function: linear; */
+            /* transition-timing-function: cubic-bezier(0,1,1,0);  */
+            transition-timing-function: steps(10);
+
+            /* 
+            timing-function : 진행 속도를 조절할 수 있다.
+
+            ease : 처음과 끝에 속도가 느리게 (빼놓아도 기본 이 상태이다.)
+            linear : 처음과 끝속도가 같다(동일한 속도)
+            ease-in : 점점 빨라짐
+            ease-out : 점점 느려짐
+            cubic-bezier( 시작값 , 중간값 , 최대값 , 종료값 ) : 그래프식 속도조절
+            steps(끊기는 수) : 딱 딱 끊겨서 이동한다.
+            */
+        }
+        /* 응용문제 */
+        .box3 { 
+            width: 100px; 
+            height: 100px;
+            background-color: orangered;
+            transition-duration: 3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <br>
+    <div class="box2" id="box2"></div>
+    <br><br>
+
+    <!--응용문제-->
+    <label for="check">
+        <input type="checkbox" id="check">작동
+    </label>
+    <div class="box3" id="box3"></div>
+</body>
+</html>

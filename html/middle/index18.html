@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML&CSS 4일차 중급 반응형 (Full 배너)</title>
+    <script src="../jq/jquery.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            //$("#banner0").fadeOut(2000);
+            //$("#banner1").fadeIn(2000);
+
+            var $node = 0;
+            var $ea = $("#banner>label").length;
+            $("#btn1").click(function(){
+
+                $("#banner"+$node).stop().fadeOut(1000);
+                $node -= 1;
+                if($node < 0){
+                    $node = 1;
+                }
+                $("#banner"+$node).stop().fadeIn(1000);
+            });
+
+            $("#btn2").click(function(){
+                $("#banner"+$node).stop().fadeOut(1000);
+                $node += 1;
+                if($node == $ea){
+                    $node = 0;
+                }
+                $("#banner"+$node).stop().fadeIn(1000);
+                
+            });
+
+            $("#banner").mouseenter(function(){ //오브젝트 안에서 다른 오브젝트를 작동해야할 경우 over(x), enter(O)
+                $("#btn1").stop().fadeIn(1000);
+                $("#btn2").stop().fadeIn(1000);
+
+                $("#btn1").css({
+                    "left":"100px",
+                    "opacity":"1"   // opacity : 투명도 설정 0 ~ 1 까지 있다. 소수점도 가능
+                });
+                $("#btn2").css({
+                    "right":"100px",
+                    "opacity":"1"
+                });
+            });
+            $("#banner").mouseleave(function(){
+                
+                $("#btn1").css({
+                    "left":"",
+                    "opacity":""
+                });
+                $("#btn2").css({
+                    "right":"",
+                    "opacity":""
+                });
+                $("#btn1").stop().fadeOut(500);
+                $("#btn2").stop().fadeOut(500);
+            });
+        });
+    </script>
+    <style>
+        /* 풀배너 기본사이즈 width:2560px */
+        body{ margin: 0; padding: 0;}
+        ul, ol {list-style: none; margin: 0; padding: 0;}
+        span, label {display: block;}
+        a {text-decoration: none;}
+        img { width: 100%; object-fit: cover;}  /* object-fit 찌부러지지않게 해주는 것. 잊지말것! */
+
+        .banner {
+            height: 613px; 
+            max-width: 2560px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+        }
+        .banner > label {
+            position: absolute; /* absolute 쓰고 inherit을 쓰면 값이 작용X */
+        }   
+        .b { 
+            width: 100%; 
+            max-width: inherit; 
+            height: inherit;
+            background:url("./full_banner0.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; 
+            /* size : contain = 가로, 세로 크기가 서로 조건이 다를 경우 
+            비율에 맞춰서 가로 세로 사이즈로 이미지가 조정되어집니다. ※해상도를 조절하면 이미지가 달라진다.*/
+            /* size : cover = 가로,세로 크기 조건이 달라도 비율에 맞춰서 오브젝트 이미지가 크기를 조절한다. */
+            background-position: 50%;
+            /* size를 cover 때리고, position을 50%로 때렸다. 줌아웃시에도 중앙에 오게끔 */
+        }
+        .c { 
+            width: 100%; 
+            max-width: inherit; 
+            height: inherit;
+            background:url("./full_banner1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            display: none;
+        }
+        /* 배너 버튼 */
+        .banner > span {
+            width: 100px; 
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            display: none;
+            cursor: pointer;
+            transition-duration: 2s;
+        }
+        .banner > span > img { width: 100%; }
+        .left_btn { left: 0; } /*left값을 꼭 넣어줘야 위에 jq에서 정상 작동 가능함 css값이 원상태로 돌리는 것("")이기 때문. */
+        .right_btn { right: 0; }
+    </style>
+</head>
+<body>
+    <!--<img src="full_banner1.jpg">-->
+    <section class="banner" id="banner" id="banner">
+        <label class="b" id="banner0"></label>
+        <label class="c" id="banner1"></label>
+        <span class="left_btn" id="btn1"><img src="./leftbtn.svg"></span>
+        <span class="right_btn" id="btn2"><img src="./rightbtn.svg"></span>
+    </section>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* { 
+    box-sizing: border-box; 
+}
+body { 
+    margin: 0; padding: 0;
+}
+span,label { 
+    display: block; 
+}
+ul,ol,dl { 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+}
+img { 
+    width: 100%; 
+    object-fit: cover;
+}
+/* 
+    object-fit:  (모바일 전용) 이미지 너비와 높이에 대한 크기를 자동으로 조절하는 기능을 가지고 있다. 
+*/
+
+.top {
+    display: none;
+}
+.m_menu { /*모바일 메뉴*/
+    display: none;
+} 
+.g_box{ 
+    height:30px;
+    background-color: gray;
+}
+.m_box{
+    width: 1200px; 
+    height: 30px;
+    margin: 0 auto;
+}
+.topmenu {
+    height:30px; 
+    float: right; 
+}
+.topmenu > li { 
+    width:80px; 
+    height: 30px; 
+    float: left; 
+    color: white;
+    font-size: 12px; 
+    text-align: center;
+    line-height: 30px; 
+    position: relative;
+}
+.topmenu > li:after {   
+    content: "|";
+    position: absolute; /* li 안에서 놀게끔 li에는 relative를 준 후 after를 absolute를 준다. */
+    right: 0;
+    /* 
+        before, after : 해당 오브젝트의 앞 또는 뒤 content를 이용해서
+        문구 또는 이미지를 추가할 수 있다. 
+        단, 해당 오브젝트에 위치를 설정할 경우 position을 설정하면 편하게 표준화를 만들 수 있다.
+    */
+}
+.topmenu > li:last-child:after{ /* li의 마지막 노드에는 content를 사용하지 않는다. 라는 뜻 */
+    content: "";
+}
+.menus {
+    height: 150px;
+}
+.divlogo{ 
+    width: 1200px; 
+    height: inherit;
+    margin: 0 auto;
+    text-align: center;
+}
+.logo{ 
+    width: 250px; 
+    height: 150px; 
+    display: inline-block; /* display: inline-block 이랑 margin 0 auto 같이 못씀 */
+    line-height: 150px;
+}
+.logo > img { 
+    vertical-align: middle; /* 상위의 line-height와 함께 사용하면 바로 중앙으로 내려감 */
+}
+
+.main {
+    height: 800px; 
+    background-color: pink;
+}
+
+
+/*  모바일 css  */
+/* 
+    반응형 사이트 제작시 주의사항
+    PC에서 사용되는 태그를 모두 사용하지는 않으며, display : none, block
+    nedia쿼리에서 제어가 되도록 표시를 필수적으로 적용하게 됩니다.
+*/
+@media screen and (min-width:320px) and (max-width:860px) {
+    .g_box { 
+        display: none; 
+    }
+    .menus { 
+        display: none; 
+    }
+    .top {
+        height: 60px;
+        background-color: black;
+        display: block;
+    }
+    .m_top { 
+        width: 100%;
+        height: inherit;
+        position: relative;
+        display: block;
+    }
+    .leftbtn { 
+        width: 30px;
+        height: 60px;
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        cursor: pointer;
+    }
+    .rightbtn { 
+        width: 30px;
+        height: 60px;
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        cursor: pointer;
+    }
+    .logobtn {
+        width: 120px;
+        height: 60px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        margin-left: -60px;
+    }
+    .m_top > label {
+        line-height: 60px;
+    }
+    .m_top > label > img {
+        vertical-align: middle;
+    }
+    .m_menu {
+        width: 0;
+        height: 400px;
+        background-color: purple;
+        display: block;
+    }
+    
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML&CSS 2일차 중급 반응형 width,max-width,min-width</title>
+    <style>
+        body{ margin: 0; padding: 0;}
+        ul, ol {list-style: none; margin: 0; padding: 0;}
+        span, label {display: block;}
+        a {text-decoration: none;}
+        div{text-align: right; height: 50px;}
+
+        /* 반응형 웹사이트에서는 무조건 max, min-width를 써야한다. */
+        .box1 { 
+            width: 700px;
+            background-color: lightcoral;
+        }
+        /* max-width : 가로 최대 길이이며, 일반적인 (width:--px)와는 함께 사용하지 않습니다. */
+        .box2 { 
+            max-width: 700px;
+            background-color: purple;
+        }
+        /* min-width : 가로 최소 길이이며, (width:--%)와 함께 사용할 수 있다. */
+        .box3 { 
+            width: 100%; 
+            min-width: 500px;
+            background-color: slateblue;
+        }
+        /* 최대크기는 700px이며, 최소 가로크기는 400px 입니다. */
+        .box4 { 
+            max-width: 700px; 
+            min-width: 400px; /* width: 100%가 들어가있는 것이다. */
+            background-color: orange;
+        }
+
+        /*응용*/
+        .black_box { 
+            max-width: 560px; 
+            min-width: 350px; 
+            height: 50px;
+            background-color: black;
+            position: relative;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .black_box > span { 
+            width: 40px; 
+            height: 40px;
+            background-color: orange;
+            position: absolute;
+        }
+        .black_box > span:last-child{ 
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">TEST</div>
+    <div class="box2">TEST</div>
+    <div class="box3">TEST</div>
+    <div class="box4">TEST</div>
+    <br><br>
+    <!--응용-->
+    <div class="black_box">
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

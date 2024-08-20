@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML&CSS 2일차 중급 반응형 로그인 페이지</title>
+<link rel="stylesheet" type="text/css" href="index7.css?v=10">
+</head>
+<body><!--name값은 두개여야만 한다. input 4개를 쓰는게 아니다.-->
+    <!--모바일 화면-->
+
+    <!--PC화면-->
+<form id="f">
+    <input type="hidden" name="url" value="http://lswhobby.dothome.co.kr/html/index7.html" >
+    <div class="box">
+    <ol class="olbox">
+        <li>
+            <input type="text" placeholder="아이디를 입력하세요" class="id_text" name="user_id">
+        </li>
+        <li>
+            <input type="password" placeholder="패스워드를 입력하세요" class="pass_text" name="user_pw">
+        </li>
+        <li>
+            <input type="submit" value="로그인" class="btn1" formmethod="POST" formaction="http://lovertvtest.dothome.co.kr/html/login.php">
+        </li>
+    </ol>
+    </div>
+</form>
+</body>
+</html>

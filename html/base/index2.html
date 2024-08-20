@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 기초02 - 입력 태그 + 버튼</title>
+  </head>
+  <body>
+
+    <form action="www.naver.com/조건/조건2/어디" method="post" enctype="application/x-www-form-urlencoded" novalidate  oninput="aa.value=parseInt(a.value)">
+      <!-- 
+        form 태그의 속성
+        1. action : 입력 값을 받게되는 서버 측 URL을 적어줌.
+        2. method : 서버로 데이터를 전송하는 방식. (post 방식, get 방식)
+        3. envtype : 
+          - application/x-www-form-urlencoded : 서버에 보내기 전에 모든 문자를 인코딩하는 방식이며 폼에 텍스트 데이터를 포함했을 때 지정합니다.(기본값)
+          - multipart/form-data : 파일 업로드 컨트롤처럼 문자가 아닌 파일을 전송할 때 사용됩니다.
+          - text/plain : 일반 텍스트로 인코딩 됩니다.
+        4. novalidate : HTML5에 새롭게 추가된 속성, 유효성 미확인을 지정합니다.        
+      -->
+  
+      <input type="text" value="" placeholder="텍스트를 입력해주세요" />
+      <hr>
+
+      <input type="password" value="" placeholder="패스워드 입력 부탁" />
+      <hr>
+
+      <input type="number" min="0" max="20" placeholder="숫자를 입력해주세요" style="width: 300px;" />
+      <hr>
+
+      <input type="tel" placeholder=" '-'을 제외한 번호를 입력해주세요 " />
+      <hr>
+
+      <input type="date" />
+      <hr>
+
+      <input type="week"> <!-- 주일 표시 -->
+      <hr>
+
+      <input type="month"> <!-- 월 표시. -->
+      <hr>
+
+      <input type="time"> <!-- 시간 선택 -->
+      <hr>
+      
+      <input type="datetime-local"> <!-- 년, 월, 일, 시, 분  -->
+      <hr>
+   
+      <input type="file" accept=".gif, .jpg, .png"/>
+      <hr>
+
+      <input type="email" />
+      <hr>
+
+      <label for="radio-group1" style="cursor: pointer;">라디오 버튼1</label>
+      <input type="radio" id="radio-group1" name="same-572-group" />
+      <br>
+      <label for="radio-group2" style="cursor: pointer;">라디오 버튼2</label>
+      <input type="radio" id="radio-group2" name="same-572-group" />
+      <br>
+      <label for="radio-group3" style="cursor: pointer;">라디오 버튼3</label>
+      <input type="radio" id="radio-group3" name="same-572-group" />
+
+      <hr>
+
+      <label for="check1" style="cursor: pointer;">항목1</label>
+      <input type="checkbox" id="check1" />
+
+      <label for="check2" style="cursor: pointer;">항목2</label>
+      <input type="checkbox" id="check2" />
+
+      <label for="check3" style="cursor: pointer;">항목3</label>
+      <input type="checkbox" id="check3" />
+
+
+      <hr>
+
+      <input type="reset" value="입력초기화">
+      <hr>
+
+      <input type="submit" />
+      <hr>
+
+
+
+
+      <textarea name="" id="" cols="30" rows="10">
+        길이를 조절할 수 있는 자유로운 입력 태그
+      </textarea>
+      <hr>
+
+      <input type="range" min="1" max="10" id="a"> <!-- 범위 선택. min = 최소, max = 최대-->
+      
+      <output for="a" name="aa"></output>  <!-- output 태그 : input에 사용된 값을 받아서 보여주는 태그 입니다. -->
+      <hr>
+
+
+      <select name="" id="">
+        <option value="" selected> 옵션을 선택해주세요 </option>
+        <option value="www.naver.com"> 네이버 </option>
+        <option value="www.nate.com"> 네이트 </option>
+        <option value="www.google.com"> 구글 </option>
+        <option value="www.daum.com"> 다음 </option>
+      </select>
+      <hr>
+
+      <button type="button">
+        <strong>버튼</strong>
+      </button>
+      <input type="button" value="버튼222" />
+      <hr>
+      
+      <button type="submit" onsubmit="formSubmit()">보내기</button>
+      <hr>
+
+    </form>
+
+
+    <!-- 참고문서
+      1. HTML이란 : https://developer.mozilla.org/ko/docs/Web/HTML
+      2. 
+      3.
+      4.
+      5.
+      6.
+      7.
+    -->
+      <script>
+        function formSubmit() { // method
+        }
+      </script>
+  </body>
+</html>

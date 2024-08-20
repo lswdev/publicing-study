@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 기초03 - 공간 분할 태그</title>
+  <style>
+    body > *:nth-child(odd) {
+      background-color: #EEE;
+    }
+    main > *:nth-child(odd) {
+      background-color: darkkhaki;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    헤더 영역 : 문서나 특정 섹션의 header를 정의할 때 사용
+  </header>
+
+  <nav>
+    네비게이션 영역 : 네비게이션 링크의 집합을 정의할 때 사용
+  </nav>
+  
+  <main> <!-- 한번만 사용 -->
+    메인 영역 : 문서의 중심 주제 또는 주요 기능과 직접적으로 관련되어 있거나 확장된 콘텐츠로 구성해야 한다.
+    + 'article', 'aside', 'footer', 'header', 'nav' 요소의 자식 요소가 되면 안된다.
+
+    <div>
+      div(Division) 영역 : 웹사이트의 레이아웃을 만들 때 주로 사용
+    </div>
+
+    <span>
+      span 영역 : div와 같이 공간을 나타내는 태그. span은 컨텐츠의 길이만큼 width 영역이 잡힌다(content-width).
+    </span>
+
+
+    <section>
+      섹션 영역 : 본문(article)을 여러개 포함하고 있는 공간
+
+      <article>
+        아티클 영역 : 본문의 주 내용이 들어가는 공간
+      </article>
+
+    </section>
+
+    <aside>
+      aside 영역 : 페이지의 다른 콘텐츠들과 약간의 연관성을 가지고 있지만, 
+      해당 콘텐츠들로부터 분리시킬 수 있는 콘텐츠로 구성된 페이지 영역을 정의할 때 사용.
+    </aside>
+
+    
+  </main>
+  <hr>
+
+  <div style="background-color: red;">DIV 태그입니다.</div>
+  <span style="background-color: yellow;">SPAN 태그입니다.</span>
+  <!-- display: inline -->
+
+  <hr>
+  <footer>
+    푸터 영역
+  </footer>
+
+  <!-- 
+    - main 태그는 보통 페이지에 한번만 사용하는 태그이다.
+    - div 영역은 기본적으로 width(가로 길이) 100% 처리가 되어 있다. 가능 많이 사용할 태그이다. (태그를 추가하면 줄바꿈)
+    - span 영역은 width가 content-width 처리되어 태그 내부 요소에 길이가 맞춰진다. (태그를 추가하면 옆에 붙음)
+  -->
+
+</body>
+</html>
