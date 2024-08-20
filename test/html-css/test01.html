@@ -15,11 +15,10 @@
       height: 250px;
       border: 2px solid red;
       border-radius: 50%;
-    
-      display: flex;
+      
+      display: table-cell;
       text-align: center;
-      align-items: center;
-      justify-content: center;
+      vertical-align: middle;
     }
     
     .ulcss {
@@ -29,11 +28,11 @@
       list-style: none;
 
       padding: 0;
+      margin: 0;
 
       display: block;
       text-align: center;
       line-height: center;
-      
     }
 
     .ulcss li:nth-child(even) {
@@ -44,7 +43,25 @@
       background-color: red;
     }
 
-    .olcss { }
+    .olcss {
+      margin: 0;
+      padding: 0;
+    }
+
+    .olcss li {
+      width: 200px;
+      height: 50px;
+      
+      list-style: none;
+      
+      border: 2px solid yellow;
+      border-style: dotted;
+      cursor: pointer;
+      
+      display: inline-block;
+      text-align: center;
+      line-height: 50px;
+    }
 
 
   </style>
@@ -53,9 +70,7 @@
   <!-- 문제 1 
     이 박스를 동그랗게 만들고 텍스트를 중앙에 정렬해주세요
   -->
-  <div class="box-to-circle">
-    <span>텍스트 <br>중앙 정렬</span>
-  </div>
+  <div class="box-to-circle">텍스트 <br>중앙 정렬</div>
 
   <hr>
   <!-- 문제 2
