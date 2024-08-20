@@ -40,6 +40,19 @@
       text-align: center;
     }
 
+    ul, li, ol {
+      /* 같은 속성 두가지 선택지에 적용하려면 ',(쉼표)'를 사용 */
+      list-style: none;
+    }
+
+    .ulcss > li {
+      border: 1px solid gray;
+    }
+
+    .ulcss{
+      /* 바로 아래 뎁스에 있는 태그를 선택 할 때 '>'를 사용 */
+    }
+
   </style>
 
 </head>
@@ -54,6 +67,21 @@
   <hr>
 
   <div id="box3">텍스트33</div>
+  
+  <ul class="ulcss"> 
+    <li>List1</li>
+    <li>List2</li>
+    <li>List3</li>
+    <li>List4</li>
+    <li>List5</li>
+    <li>
+      <oi>
+        <li>List</li>
+        <li>List</li>
+        <li>List</li>
+      </oi>
+    </li>
+  </ul>
 
 
 </body>
