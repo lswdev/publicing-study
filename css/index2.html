@@ -16,7 +16,8 @@
     }
 
     .ulcss > li:nth-child(4) {
-      /* :nth-child는 선택한 태그에 몇 번 째인지 선택하는 선택자입니다. */
+      /* :nth-child는 선택한 요소에 몇 번 째인지 선택하는 선택자입니다. */
+      
       background-color: red;
     }
 
@@ -41,7 +42,7 @@
       color: red;
     }
 
-    .olcss li:nth-child(2n + 3) {
+    .olcss li:nth-child(3n + 1) {
       /*  
         (숫자n) 이라고 함은 몇번째마다 적용할건지 설정하는 것.
         (+ 숫자)는 어느 노드부터 시작할건지 지정해주는 것.
@@ -62,7 +63,7 @@
     <div class="container">1</div><!-- O -->
 
     <ul class="ulcss">
-      <li>첫번째</li> 
+      <li>첫번째</li>
       <li>두번째</li> 
       <li>세번째</li>
       <li>

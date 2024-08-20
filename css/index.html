@@ -40,6 +40,19 @@
       text-align: center;
     }
 
+    ul,ol,li {
+      /* 같은 속성을 두가지 선택자에 적용하려면 ',' 사용합니다. */
+      list-style: none;
+    }
+
+    .ulcss > li {
+      /* 바로 아래 앱스에 있는 태그를 선택할 때 '>' 사용합니다. */
+    }
+    
+    .ulcss ol > li {
+      /* 바로 아래 앱스에 있는 태그를 선택할 때 '>' 사용합니다. */
+      border: 1px solid red;
+    }
   </style>
 
 </head>
@@ -54,6 +67,20 @@
   <hr>
 
   <div id="box3">텍스트33</div>
+
+  <ul class="ulcss">
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+    <li>list4</li>
+    <li>
+      <ol>
+        <li>olList1</li>
+        <li>olList2</li>
+        <li>olList3</li>
+      </ol>
+      </li>
+  </ul>
 
 
 </body>
