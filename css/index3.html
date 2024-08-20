@@ -39,6 +39,7 @@
             width: 200px;
             height: 300px;
             background-color: black;
+            color: white;
             border-radius: 15px;
             position: absolute;
             right: 15px;
@@ -67,34 +68,31 @@
             padding-top: 5px;
             cursor: pointer;
         }
-/*******************************************************************************************/
+/***********************************************************************/    
 
-        .scroll-contain {
-            border: 2px solid blue;
-            
-            height: 100vh; /* view height */
-            box-sizing: border-box;
-            
-            position 
-        }
+    .scroll-contain {
+      border: 2px solid blue;
+      /* height: 100vw;  view width */
+      height: 100vh;  /* view height */
+      box-sizing: border-box;
 
-        .popup2 {
-            width: 200px;
-            height: 300px ;
-            background-color: yellow;
-            border: 2px solid black;
-            border-radius: 15px;
-            padding: 15px;
-            box-sizing: border-box;
+      position: static;
+    }
 
-            position: fixed;
-            top: 50%;
-            left: 100%;
-        
+    .popup2 {
+      width: 200px;
+      height: 300px;
+      background-color: yellow;
+      border: 2px solid black;      
+      border-radius: 15px;
+      padding: 15px;
+      box-sizing: border-box;
 
-        transform: translate(-230px, -50%);
-
-        }
+      position: fixed;
+      top: 50%;
+      left: 100%;      
+      transform: translate(-230px, -50%);
+    }
 
 
     </style>
@@ -110,22 +108,19 @@
 </div>
 
 <div class="second-container">
-    <div class="popup">
-
-    </div>
-    <span class="close">X</span>
-    </div>
-    
-    <div class="contents">
-        <img src="../images/happy-cat.gif" alt="고양이 이미지" />
-    </div>
-
+  <div class="popup">
     <div>
-        콘텐츠는 이런식으로 작성합니다.
+      <span class="close">X</span>
     </div>
+    <div class="contents">
+      <img src="../images/happy-cat.gif" alt="고양이 이미지" />
+    </div>
+    <div>콘텐츠는 이런식으로 작성합니다.</div>
+  </div>
+</div>
 
-</div>
-</div>
+
+
 
 <hr>
 
