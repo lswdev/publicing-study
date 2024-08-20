@@ -10,13 +10,23 @@
       border: 1px solid olivedrab;
     }
 
+    div.container {
+      /* div.container를 띄어쓰고 안하고의 중요함 */
+      border: 2px dashed blue;
+    }
+
     ul li > span {
       /* 꺽쇠 선택자는 바로 아래(자식)태그에만 적용되는 선택자를 말한다. */
       border: 1px solid rgb(151, 218, 144);
     }
 
     .ulcss > li:nth-child(4) {
-      /* :nth-child는 선택한 태그에 몇 번 째인지 선택하는 선택자입니다. */
+      /* :nth-child는 선택한 요소에 몇 번 째인지 선택하는 선택자입니다. */
+      /* 
+        숫자: 몇번째 요소인지 특정
+        even: 짝수번째 요소
+        odd: 홀수번째 요소
+      */
       background-color: red;
     }
 
@@ -26,7 +36,7 @@
     }
 
     label + input[type='radio'] {
-      /* 태그에 써준 속성은 [대괄호]로 선택할 수 있다. */
+      /* 태그에 써준 속성(attribute)은 [대괄호]로 선택할 수 있다. */
       margin-left: 20px;
     }
 
@@ -38,6 +48,7 @@
 
     .all * {
       /* 전체 선택자는 * 모양을 사용합니다. */
+      /* .all 밑에 있는 모든 자식 노드들을 선택하는 것 */
       color: red;
     }
 
@@ -58,8 +69,8 @@
   </style>  
 </head>
 <body>
-  <div class="container"><!-- X -->
-    <div class="container">1</div><!-- O -->
+  <div class="container"> <!-- X -->
+    <div class="container">1</div> <!-- O -->
 
     <ul class="ulcss">
       <li>첫번째</li> 
@@ -98,6 +109,8 @@
     <button type="button">버튼이예용</button>
     <div>두번째 Div 태그입니다.</div>
     
+    <hr>
+
     <label for="name1">이름1</label>
     <input type="radio" id="name1" name="names">홍길동
     <br>
