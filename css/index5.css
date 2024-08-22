@@ -1,0 +1,51 @@
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+.box {
+  /* float 속성은 비슷한 예제로 한글 파일에서 "사진 > 본문과의 배치 > 어울림" 과 비슷하다. */
+  float: left;
+  /* float: right; */
+  margin-right: 15px;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
+
+.cleared {
+  /* clear할 float 속성을 적어준다.  
+
+    * left - float: left 속성 탈출
+    * right - float: right 속성 탈출
+    * both - left와 right 속성 모두 탈출 
+  */
+  clear: none;
+}
+
+/**************************************************************/
+
+.wrapper {
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;  
+
+  /* 
+    * display: flow-root - 생긴지 얼마 안된 속성이다.
+    * overflow : hidden - 영역 내부의 요소가 흘러 넘치는 것을 자른다. 
+    * 두 속성 모두 Block Formating Context(BFC) 라는 속성을 가진다.
+    * 두 속성의 성질이 같기 때문에 안정적이지 않은 flow-root 보다는 아직까지 overflow:hidden 속성이 좋다.
+  */
+
+  display: flow-root;
+  /* overflow: hidden; */
+}
+
+
+/*  
+  flow-root CSS 속성 '웹 호환성(웹 크로스브라우징)' 관련 참고 자료 : https://caniuse.com/?search=flow-root
+*/
