@@ -12,14 +12,16 @@
     .box {
       width: 100%;
       height: 100%; 
-      text-align: center; /* background 가로 정렬 */
-      padding-top: 100px; /* padding-top을 10px 밀어 background 세로 정렬 */
+      text-align: center;
+      margin-top: 100px; /* margin-top에 100px을 먹여야 human이 body위(=background)에 붙기 가능 
+      padding으로 하면 자신의 간격을 늘리는 것이기 때문에 (background을 벗어나)사진이 맨위에 붙음 */
+      position: relative; /* body를 부모속성으로 */
     }
     
     .background {
       width: 700px;
       height:  700px;
-      position: relative; /* background를 부모속성으로 */
+      
       object-fit: cover; /* 사진 비율 조정 */
     }
 

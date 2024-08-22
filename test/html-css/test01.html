@@ -54,13 +54,24 @@
       
       list-style: none;
       
-      border: 2px solid yellow;
-      border-style: dotted;
+      border: 2px dotted yellow;
       cursor: pointer;
       
-      display: inline-block;
+      display: inline-block; /* 줄바꿈없이 요소를 나란히 배치하게 해줌 
+      그러나 이것때문에 간격이 생김 이유는 </li>의 줄바꿈때문 
+      --> 해결 방안
+        1. 한줄에 <li>요소를 다 써주기 ex:)  <li>List1</li><li>List2</li><li>List3</li><li>List4</li><li>List5</li>
+        2. 다음줄에 >을 사용하여 닫아주기 
+          ex:)<li>List1</li
+              ><li>List2</li
+              ><li>List3</li
+              ><li>List4</li
+              ><li>List5</li>*/
       text-align: center;
       line-height: 50px;
+
+      float: left;
+      /* 3. float를 사용하여 요소를 왼쪽으로 플로팅하고 콘텐츠을 오른쪽에 배치해줌 */
     }
 
 
@@ -105,8 +116,6 @@
     <li>List4</li>
     <li>List5</li>
   </ol>
-
-  <hr>
 
 </body>
 </html>
