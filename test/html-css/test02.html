@@ -8,41 +8,41 @@
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
     }
+
     .box {
-      width: 100%;
-      text-align: center;
-      padding-top: 100px;
+      width: 60vw; 
+      height: auto;
       position: relative;
     }
 
-    .box img:nth-child(2) {
-      width: 700px;
-      height: 700px;
-      position: relative;
+    .box img.bg {
+      width: 100%; 
+      height: auto;
+      display: block;
     }
 
     .box img.human {
-      width: 300px;
+      width: 40%; 
       position: absolute;
       left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    img {
-      display: block;
-      margin: 0 auto;
+      bottom: 5%;
+      transform: translateX(-50%);
     }
 
   </style>
 </head>
 <body>
 
-
   <div class="box">
-    <img src="../images/small/british.png" alt="사람 이미지 출력" class="human">
-    <img src="../images/scenery.jpg" alt="배경 이미지 출력" />
+    <img src="../images/scenery.jpg" alt="배경 이미지 출력" class="bg" />
+    <img src="../images/small/british.png" alt="사람 이미지 출력" class="human" />
   </div>
+
 </body>
 </html>
