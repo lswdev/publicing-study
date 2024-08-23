@@ -46,11 +46,13 @@
     .olcss {
       margin: 0;
       padding: 0;
+      font-size: 0;
     }
 
     .olcss li {
       width: 200px;
       height: 50px;
+      font-size: 1rem;/* rem 이라는 단위는 페이지에서 root로서 잡혀있는 font의 기본 사이즈(16px) */
       
       list-style: none;
       
@@ -70,7 +72,7 @@
       text-align: center;
       line-height: 50px;
 
-      float: left;
+      /* float: left; */
       /* 3. float를 사용하여 요소를 왼쪽으로 플로팅하고 콘텐츠을 오른쪽에 배치해줌 */
     }
 
@@ -116,6 +118,7 @@
     <li>List4</li>
     <li>List5</li>
   </ol>
+
 
 </body>
 </html>
