@@ -11,7 +11,7 @@
     }
     caption {
       padding-bottom: 20px;
-      font-size: 2px;
+      font-size: 24px;
     }    
     table {
       width: 800px;
@@ -24,14 +24,22 @@
       padding: 20px 10px;
     }
 
-    th{
-      background-color: #f2f2f2;
-      font-size: 20px;
+    th:nth-child(1), td:nth-child(1) {
+      background-color: lightblue;
+    }
+    th:nth-child(2), td:nth-child(2) {
+      background-color: lightgreen;
+    }
+    th:nth-child(3), td:nth-child(3) {
+      background-color: lightpink;
+    }
+    th:nth-child(4), td:nth-child(4) {
+      background-color: lightseagreen;
+    }
+    th:nth-child(5), td:nth-child(5) {
+      background-color: lightslategray;
     }
 
-    td{
-      background-color: #e6f7ff;
-    }
   </style>
 </head>
 <body>
@@ -50,6 +58,15 @@
 
   <table>
     <caption>😈 테이블 병합 테스트 😈</caption>
+
+    <colgroup>
+      <col style="width: 100px;">
+      <col style="width: 200px;">
+      <col style="width: 150px;">
+      <col style="width: 250px;">
+      <col style="width: 200px;">
+    </colgroup>
+
     <thead>
       <tr>
         <th>목록1</th>
