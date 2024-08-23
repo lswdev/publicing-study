@@ -44,32 +44,19 @@
     th:nth-child(5), td:nth-child(5) {
       background-color: lightslategray;
     }
-
   </style>
 </head>
 <body>
-
-  <!--  
-    1. 목록의 폰트는 20px입니다.
-    2. 목록의 배경은 자유롭게 하시면 됩니다.
-    3. 내용4, 내용9, 내용14를 병합하세요.
-    4. 내용1, 내용2를 병합하세요.
-    5. 내용3, 내용8을 병합하세요.
-    6. 내용11, 내용12, 내용13을 병합하세요.
-    7. 푸터는 하나로 묶어주세요(병합)
-
-    ※ 디자인 원하시면 custom 하셔도 됩니다.
-  -->
 
   <table>
     <caption>😈 테이블 병합 테스트 😈</caption>
 
     <colgroup>
-      <col style="width: 100px;">
-      <col style="width: 100px;">
-      <col style="width: 100px;">
-      <col style="width: 100px;">
-      <col style="width: 100px;">
+      <col style="width: calc(100% / 5);"> 
+      <col style="width: calc(100% / 5);">
+      <col style="width: calc(100% / 5);">
+      <col style="width: calc(100% / 5);">
+      <col style="width: calc(100% / 5);">
     </colgroup>
 
     <thead>
@@ -84,25 +71,25 @@
 
     <tbody>
       <tr>
-        <td colspan="2">내용1, 내용2</td>
-        <td rowspan="2" >내용3, 내용8</td>
-        <td rowspan="3" >내용4, 내용9, 내용14</td>
-        <td>내용5</td>
+        <td colspan="2" style="width: calc(100% / 5 * 2);">내용1, 내용2
+        <td rowspan="2" style="width: calc(100% / 5);">내용3, 내용8</td> 
+        <td rowspan="3" style="width: calc(100% / 5);">내용4, 내용9, 내용14</td> 
+        <td style="width: calc(100% / 5);">내용5</td>
       </tr>
       <tr>
-        <td>내용6</td>
-        <td>내용7</td>
-        <td>내용10</td>
+        <td style="width: calc(100% / 5);">내용6</td>
+        <td style="width: calc(100% / 5);">내용7</td>
+        <td style="width: calc(100% / 5);">내용10</td>
       </tr>
       <tr>
-        <td colspan="3">내용11, 내용12, 내용13</td>
-        <td>내용15</td>
+        <td colspan="3" style="width: calc(100% / 5 * 3);">내용11, 내용12, 내용13</td> 
+        <td style="width: calc(100% / 5);">내용15</td>
       </tr>
     </tbody>
 
     <tfoot>
       <tr>
-        <td colspan="5">푸터</td>
+        <td colspan="5" style="width: 100%;">푸터</td> 
       </tr>
     </tfoot>
 
