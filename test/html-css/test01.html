@@ -12,6 +12,7 @@
 
     ul, ol {
       list-style: none;
+      padding: 0;
     }
 
     .box-to-circle {
@@ -20,7 +21,7 @@
       border: 2px solid red;
     }
 
-    .ulcss {
+    /* .ulcss {
       display: flex;
       text-align: center;
       align-items: center;
@@ -28,12 +29,23 @@
       width: 250px;
       height: 250px;
       border: 2px solid blue;
+    } */
+
+    .ulcss {
+      width: 250px;
+      height: 250px;
+      border: 2px solid blue;
+
+      text-align: center;
+      position: relative;
+
+      top: 50%;
     }
 
 
-    /* .ulcss > li:nth-child(2n+1) {
+    .ulcss > li:nth-child(even) {
       background-color: aqua;
-    } */
+    }
 
     .ulcss li:hover {
       background-color: violet;
@@ -75,11 +87,16 @@
     리스트를 색상으로 구분해주세요
   -->
   <ul class="ulcss">
-    <li style="color:red;">List1</li>
+    <!-- <li style="color:red;">List1</li>
     <li style="color:blue;">List2</li>
     <li style="color:purple;">List3</li>
     <li style="color:yellow;">List4</li>
-    <li style="color:green;">List5</li>
+    <li style="color:green;">List5</li> -->
+    <li>List1</li>
+    <li>List2</li>
+    <li>List3</li>
+    <li>List4</li>
+    <li>List5</li>
   </ul>
 
   <hr>

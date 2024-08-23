@@ -10,25 +10,44 @@
       padding: 0;
     }
     .box {
-      width: 100%;
+      width: 700px;
+      height: 700px;
       text-align: center;
-      padding-top: 100px;
       position: relative;
     }
     
-    img { margin: 0 auto; }
+    img { 
+      margin: 0 auto; }
+    
+    /* .human {
+      width: 300px;
+      position: relative;
+      top: 50%;
+      margin-top: -150px;
+      left: 50%;
+      margin-left: -150px;
+    } */
+
+    .human {
+      width: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
   </style>
 </head>
 <body>
+  <!-- flex 사용 금지 -->
   <!-- 배경 이미지의 사이즈는 700 X 700px 맞춰주세요.  -->
 
   <!-- 사람 이미지 사이즈는 가로 300px에 맞춰주세요 -->
   <!-- 사람 이미지 위치는 배경 이미지의 가로, 세로 중앙에 정렬 해주세요 -->
 
   <div class="box">
-    <img src="./images/small/british.png" alt="사람 이미지 출력" class="human">
-    <img src="./images/scenery.jpg" alt="배경 이미지 출력" />
+    <img src="../images/small/british.png" alt="사람 이미지 출력" class="human">
+    <img src="../images/scenery.jpg" alt="배경 이미지 출력" />
   </div>
 </body>
 </html>
