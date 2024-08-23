@@ -12,24 +12,31 @@
     caption {
       padding-bottom: 20px;
     }    
+    
     table {
       width: 800px;
       margin: 50px auto;
       border-spacing: 0;
       border-collapse: collapse;
     }
+
     th, td {
-      border: 2px solid gray;
+      border: 2px solid rgba(202, 202, 202, 0.459);
       padding: 20px 10px;
     }
-
+    
     thead > tr {
       font-size: 20px;
-      background-color: greenyellow;
+      background-color: rgb(49, 107, 49);
     }
-
+    
     td {
       text-align: center;
+      font-weight: bold;
+    }
+
+    .style:hover {
+      background-color: rgba(191, 255, 189, 0.788);
     }
   </style>
 </head>
@@ -61,10 +68,10 @@
 
     <tbody>
       <tr>
-        <td colspan="2">내용1,2 병합</td>
+        <td class="style" colspan="2">내용1,2 병합</td>
         <!-- <td>내용2</td> -->
-        <td rowspan="2">내용3,8 병합</td>
-        <td rowspan="3">내용4,9,14 병합</td>
+        <td class="style" rowspan="2">내용3,8 병합</td>
+        <td class="style" rowspan="3">내용4,9,14 병합</td>
         <td>내용5</td>
       </tr>
       <tr>
@@ -75,7 +82,7 @@
         <td>내용10</td>
       </tr>
       <tr>
-        <td colspan="3">내용11,12,13 병합</td>
+        <td class="style" colspan="3">내용11,12,13 병합</td>
         <!-- <td>내용12</td> -->
         <!-- <td>내용13</td> -->
         <!-- <td>내용14</td> -->
